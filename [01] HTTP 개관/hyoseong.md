@@ -6,7 +6,7 @@
 
 # 1.2 웹 클아이언트와 서버
 
-    ![클라이언트와 서버통시](./image/clientToServer.png)
+![클라이언트와 서버통시](./image/clientToServer.png)
 
 # 1.3 리소스
 
