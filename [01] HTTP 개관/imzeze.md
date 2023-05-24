@@ -97,7 +97,8 @@ HTTP 메시지는 일반 텍스트 형식인 `시작줄`과 `헤더`, 데이터�
 
 ### 6.1 TCP/IP
 
-<img width="710" alt="image" src="https://github.com/flataex/http-the-definitive-guide-study/assets/67260437/6dd630e3-8b5c-4a82-9b48-4e878dbd4a9d">
+<img width="710" alt="image" src="https://github.com/flataex/http-the-definitive-guide-study/assets/67260437/6dd630e3-8b5c-4a82-9b48-4e878dbd4a9d">  
+
 HTTP는 애플리케이션 계층에 속하여 데이터를 전송하기 위해 하위 계층의 TCP를 사용한다. 또, TCP는 하위 계층인 IP를 사용한다. TCP/IP는 TCP와 IP가 층을 이루는, 패킷 교환 네트워크 프로토콜의 집합이다.
 
 ### 6.2 접속, IP 주소 그리고 포트번호
