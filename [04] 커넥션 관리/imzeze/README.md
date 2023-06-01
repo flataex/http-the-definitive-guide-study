@@ -6,16 +6,17 @@ HTTP 통신은 TCP/IP 연결을 통해 이루어진다. TCP 특성에 따라 일
 
 1. TCP 스트림은 세그먼트로 나뉘어 IP 패킷을 통해 전송된다
 
-<img width="710" alt="image" src="https://github.com/flataex/http-the-definitive-guide-study/assets/67260437/6dd630e3-8b5c-4a82-9b48-4e878dbd4a9d">   
+<img width="710" alt="image" src="https://github.com/flataex/http-the-definitive-guide-study/assets/67260437/6dd630e3-8b5c-4a82-9b48-4e878dbd4a9d">
 
-HTTP는 TCP 커넥션을 통해 전송하고자 하는 데이터를 순서에 맞게 보내고, TCP는 데이터를 세그먼트 단위로 나눠 IP 패킷을 담아 데이터를 전송한다.  
-  
+HTTP는 TCP 커넥션을 통해 전송하고자 하는 데이터를 순서에 맞게 보내고, TCP는 데이터를 세그먼트 단위로 나눠 IP 패킷을 담아 데이터를 전송한다.
+
 > IP 패킷 구성은 다음과 같다.
-* IP 헤더  
-발신지, 목적지 IP 주소 등  
-* TCP 세그먼트 헤더  
-TCP 포트 번호, TCP 제어 플래그, 데이터의 순서와 무결성을 검사하기 위해 사용되는 숫자 값  
-* TCP데이터조각
+
+- IP 헤더  
+  발신지, 목적지 IP 주소 등
+- TCP 세그먼트 헤더  
+  TCP 포트 번호, TCP 제어 플래그, 데이터의 순서와 무결성을 검사하기 위해 사용되는 숫자 값
+- TCP데이터조각
 
 2.  TCP 커넥션 유지하기
     > TCP 커넥션 구성
@@ -90,7 +91,9 @@ HTTP는 TCP 바로 위에 있는 계층이기 때문에 HTTP 트랜잭션의 성
 
 1. 흔히 잘못 이해하는 Connection 헤더  
    HTTP Connection 헤더 필드는 `커넥션 토큰`을 쉼표로 구분하여 가지고 있으며, 여기에 있는 토큰은 다음 커넥션에 전달되지 않는다. 특정 두 서버 간에 영향을 미치기 때문에 hop-by-hop(홉별) 헤더명을 기술한다고도 한다.
-   <img width="396" alt="image" src="https://github.com/flataex/http-the-definitive-guide-study/assets/67260437/f726cccf-e543-4159-9d3c-395716d5a63d">  
+
+   <img width="396" alt="image" src="https://github.com/flataex/http-the-definitive-guide-study/assets/67260437/f726cccf-e543-4159-9d3c-395716d5a63d">
+
    다음 홉 (hop)에 메시지를 전달하기 전에 Connection 헤더와 Connection 헤더에 기술되어 있던 모든 헤더를 삭제한다. 따라서 위와 같은 값을 가질 때, `meter`는 다음 커넥션에 전달되지 않고, 트랜잭션이 끝나면 커넥션이 끊긴다.
 
 2. 순차적인 트랜잭션 처리에 의한 지연  
