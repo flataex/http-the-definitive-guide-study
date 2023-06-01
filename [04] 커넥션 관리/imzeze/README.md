@@ -6,7 +6,8 @@ HTTP 통신은 TCP/IP 연결을 통해 이루어진다. TCP 특성에 따라 일
 
 1. TCP 스트림은 세그먼트로 나뉘어 IP 패킷을 통해 전송된다
 
-<img width="710" alt="image" src="https://github.com/flataex/http-the-definitive-guide-study/assets/67260437/6dd630e3-8b5c-4a82-9b48-4e878dbd4a9d">    
+<img width="710" alt="image" src="https://github.com/flataex/http-the-definitive-guide-study/assets/67260437/6dd630e3-8b5c-4a82-9b48-4e878dbd4a9d">   
+
 HTTP는 TCP 커넥션을 통해 전송하고자 하는 데이터를 순서에 맞게 보내고, TCP는 데이터를 세그먼트 단위로 나눠 IP 패킷을 담아 데이터를 전송한다.  
   
 > IP 패킷 구성은 다음과 같다.
